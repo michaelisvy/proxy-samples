@@ -7,8 +7,6 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import cache.simple.CachedBeanTest;
-
 public class TransactionProxyTest {
 	
 	private static Logger logger = Logger.getLogger(TransactionProxyTest.class);

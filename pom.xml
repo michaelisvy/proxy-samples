@@ -61,7 +61,8 @@
 
 	<dependencies>
 		<!-- ********************************************************************** 
-			** SPRING DEPENDENCIES ** ********************************************************************** -->
+			 ** 			SPRING DEPENDENCIES 								 ** 
+			 ********************************************************************** -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
@@ -75,7 +76,8 @@
 
 
 		<!-- ********************************************************************** 
-			** HIBERNATE DEPENDENCIES ** ********************************************************************** -->
+			 ** 			HIBERNATE DEPENDENCIES 								 ** 
+			 ********************************************************************** -->
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -104,19 +106,9 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax.transaction</groupId>
-			<artifactId>jta</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.14</version>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.2.126</version>
 		</dependency>
 
 		<dependency>
@@ -130,10 +122,12 @@
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache</artifactId>
 			<version>2.5.2</version>
+			<type>pom</type>
 		</dependency>
 
 		<!-- ********************************************************************** 
-			** TEST DEPENDENCIES ** ********************************************************************** -->
+			 ** 						TEST DEPENDENCIES 						 ** 
+			 ********************************************************************** -->
 
 		<dependency>
 			<groupId>junit</groupId>

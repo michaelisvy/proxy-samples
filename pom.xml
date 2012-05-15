@@ -88,17 +88,9 @@
 
 
 		<!-- ********************************************************************** 
-			** OTHER DEPENDENCIES ** ********************************************************************** -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-jcl</artifactId>
-			<version>${sl4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${sl4j.version}</version>
-		</dependency>
+			 ** 				OTHER DEPENDENCIES 								 ** 
+			 ********************************************************************** -->
+		
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>

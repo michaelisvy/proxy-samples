@@ -1,0 +1,14 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+    <cache name="accounts"
+       maxElementsInMemory="100"
+            eternal="false"
+            timeToIdleSeconds="2"
+            timeToLiveSeconds="2"
+            overflowToDisk="false"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="1"
+            memoryStoreEvictionPolicy="LRU"/>
+    
+</ehcache>

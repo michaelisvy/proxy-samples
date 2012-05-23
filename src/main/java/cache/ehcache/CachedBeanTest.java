@@ -21,16 +21,17 @@ public class CachedBeanTest {
 	
 	
 	@Test
-	public void findAccountCachedFiveSeconds() throws Exception {
-		Account account1 = accountService.findAccountCachedFiveSeconds(1);
-		Account account2 = accountService.findAccountCachedFiveSeconds(1);
+	public void findAccountCached() throws Exception {
+		Account account1 = accountService.findAccountCached(1);
+		Account account2 = accountService.findAccountCached(1);
 		// since the bean is cached, we expect to have the same address
 		Assert.assertEquals(account1.toString(), account2.toString());
 		
-		Thread.sleep(3000);
-		account2 = accountService.findAccountCachedFiveSeconds(1);
+		Thread.sleep(3000); // object in the cache should be evicted per ehcache configuration: timeToLiveSeconds="2"
+		account2 = accountService.findAccountCached(1);
 		
 		// cache has been evicted, they now should have a different address
+		logger.info("account1: " + account1 + "; account2: " + account2);
 		Assert.assertFalse(account1.toString().equals(account2.toString()));
 	}
 	

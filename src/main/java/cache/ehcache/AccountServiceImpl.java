@@ -14,16 +14,10 @@ public class AccountServiceImpl implements AccountService {
 	private EntityManager entityManager;
 	
 
+
 	@Override
 	@Cacheable(value="accounts", key="#id")
 	public Account findAccountCached(long id) {
-		Query query = entityManager.createQuery("from Account a where a.id=:id").setParameter("id", id);
-		return (Account) query.getSingleResult();
-	}
-	
-	@Override
-	@Cacheable(value="accounts", key="#id")
-	public Account findAccountCachedFiveSeconds(long id) {
 		Query query = entityManager.createQuery("from Account a where a.id=:id").setParameter("id", id);
 		return (Account) query.getSingleResult();
 	}

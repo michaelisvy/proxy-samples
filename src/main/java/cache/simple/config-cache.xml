@@ -6,8 +6,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.1.xsd">
 
-
+	<!-- enables scanning for @Cacheable annotation -->
 	<cache:annotation-driven />
+	
+	<!-- using Spring's internal Cache implementation -->
 	<bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
 		<property name="caches">
 			<set>

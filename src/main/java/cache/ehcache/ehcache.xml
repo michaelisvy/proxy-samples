@@ -1,10 +1,12 @@
 <ehcache>
     <diskStore path="java.io.tmpdir"/>
+
+	<!-- objects are evicted from the cache every 2 seconds -->
     <cache name="accounts"
-       maxElementsInMemory="100"
-            eternal="false"
-            timeToIdleSeconds="2"
             timeToLiveSeconds="2"
+
+       		maxElementsInMemory="100"
+            eternal="false"
             overflowToDisk="false"
             maxElementsOnDisk="10000000"
             diskPersistent="false"

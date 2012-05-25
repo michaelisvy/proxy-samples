@@ -15,8 +15,12 @@ public class AccountServiceImpl  implements AccountService {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
+	/**
+	 * @Cacheable and @Transactional used together
+	 */
 	@Override
 	@Cacheable(value="accounts", key="#id")
+	@Transactional(readOnly=true)
 	public Account findAccountCached(long id) {
 		Query query = entityManager.createQuery("from Account a where a.id=:id").setParameter("id", id);
 		return (Account) query.getSingleResult();

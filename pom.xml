@@ -4,10 +4,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.springsource.training.module</groupId>
-	<artifactId>hibernate-jpa-config-samples</artifactId>
+	<artifactId>proxy-samples</artifactId>
 	<version>1.0.0-CI-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>hibernate-jpa-config-samples</name>
+	<name>proxy-samples</name>
 
 	<properties>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
